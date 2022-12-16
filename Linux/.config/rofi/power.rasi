@@ -1,0 +1,24 @@
+@theme "~/.config/rofi/themes/rounded-nord-dark.rasi"
+
+configuration {
+  mode: "window,run,ssh,combi,drun";
+  show-icons: true;
+  font: "JetBrainsMono Nerd Font 12";
+  terminal: "alacritty";
+  ssh-command: "{terminal} -e ssh {host}";
+  icon-theme: "Flat-Remix-Blue-Dark";
+  separator-style: "solid";
+  case-sensitive: false;
+  drun-match-fields: "name,generic,exec,categories";
+  drun-show-actions: false;
+  drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+  disable-history: false;
+}
+window {
+location:   north east;
+anchor:   north east;
+orientation:   horizontal;
+children:   [mainbox];
+x-offset:   -15px;        
+y-offset:   45px;
+}
